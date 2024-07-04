@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+	<link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+	<title>Screener Syntax</title>
+	<style type="text/css">
+		body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Calibri" }
+	</style>
+</head>
+
+<body>
+<p>A screener contains sentences connected by "and" and "or" logic, square brackets (instead of parentheses) can be used to group sentences when in doubt. For example, RSI(14) is below 30 and [Close is above EMA(23) or Close is above EMA(30)].</p>
+<p>First let's define the basic building blocks of screener sentences.</p>
+<ul>
+<li>A <b>{period}</b> is a word from the following list: days, weeks, months, day, week, month.</li>
+<li>An <b>{indicator}</b> is a phrase of open/high/low/close/volume/range or any <a href="indicatorsTable.html">technical indicator</a>, prefixed with daily/weekly/monthly as the timeframe of the stock quotes, and suffixed with an optional offset, n <b>{period}</b> ago.</li>
+<li>A <b>{candlestick pattern}</b> is any <a href="candlestickPatternsTable.html">candlestick pattern</a> name, prefixed with daily/weekly/monthly as the timeframe of the stock quotes.</li>
+<li>The timeframe will default to daily when omitted; when period doesn't correspond to the timeframe in a sentence, it's assumed 1 month = 4 weeks, 1 week = 5 days.</li>
+<li>Some aggregate functions can be applied to any indicator for a specified period and be used in place of the indicator, the format is <b>{function}</b>(<b>{indicator}</b>, <b>{period}</b>). The supported functions are MIN, MAX and AVG, for minimum, maximum and average respectively.</li>
+</ul>
+<p>A sentence has the following major forms:</p>
+<h3>1. is above/below</h3>
+<p><b>{indicator}</b> [is/was/has been/had been] [more/less than] [x%/x points] above/below <b>{indicator}</b>/number, followed by an optional duration, for the last n <b>{period}</b>, and the part "[more/less than] [x%/x points]" is also optional</p>
+<p>For example,</p>
+<ul>
+<li>Close is more than 5% above MA(10) for the last 10 days</li>
+<li>Low is less than 3 points below High for the last 1 week</li>
+<li>weekly MACD Histogram(5,34,7) is below weekly MACD Histogram(5,34,7) 1 week ago</li>
+<li>Range is below MIN(Range, 6) 1 day ago</li>
+</ul>
+<h3>2. is in between</h3>
+<p><b>{indicator}</b> [is/was/has been/had been] from <b>{indicator}</b>/number to <b>{indicator}</b>/number, followed by an optional duration, for the last n <b>{period}</b></p>
+<p>For example,</p>
+<ul>
+<li>RSI(14) is from 70 to 100</li>
+<li>MA(20) has been from EMA(13) to EMA(34) for the last 1 month</li>
+<li>AVG(Percentage of Bollinger Band(20,2), 10) has been from 0.6 to 0.9 for the last 6 weeks</li>
+</ul>
+<h3>3. cross above/below</h3>
+<p><b>{indicator}</b> [crossed/has crossed] above/below <b>{indicator}</b>/number, followed by an optional duration, within the last n <b>{period}</b></p>
+<p>For example,</p>
+<ul>
+<li>EMA(13) crossed above EMA(34)</li>
+<li>MACD(12,26,9) has crossed below MACD(12,26,9) Signal within the last 5 days</li>
+</ul>
+<h3>4. gain/drop</h3>
+<p><b>{indicator}</b> gained/dropped [more/less than] [x%/x points], followed by an optional duration, over the last n <b>{period}</b></p>
+<p>For example,</p>
+<ul>
+<li>ATR(14) gained more than 300%</li>
+<li>Close dropped more than 20% over the last 10 days</li>
+</ul>
+<h3>5. increase/decrease</h3>
+<p><b>{indicator}</b> [has been increasing/decreasing] for n <b>{period}</b></p>
+<p>For example,</p>
+<ul>
+<li>High has been increasing for 2 weeks</li>
+<li>Width of Bollinger Band(20,2) has been decreasing for 30 days</li>
+</ul>
+<h3>6. reach high/low</h3>
+<p><b>{indicator}</b> [reached/has reached] a new x <b>{period}</b> high/low, followed by an optional duration, within the last n <b>{period}</b></p>
+<p>For example,</p>
+<ul>
+<li>EMA(50) reached a new 20 day high</li>
+<li>High 3 days ago reached a new 200 day high within the last 7 days</li>
+</ul>
+<h3>7. form</h3>
+<p><b>{candlestick pattern}</b> [formed/has formed], followed by an optional duration, within the last n <b>{period}</b></p>
+<p>For example,</p>
+<ul>
+<li>Bullish Harami Cross has formed within the last 3 days</li>
+<li>weekly Bearish Candlestick Pattern formed</li>
+</ul>
+<p>Besides, <b>there is a special type of statement</b> that is used alone as an expression, to get the top or bottom n stocks in terms of the value of an indicator or IBD Relative Strength.</p>
+<p>The syntax is: top/bottom n <b>{indicator}</b> or [IBD Relative Strength]</p>
+<p>For example,</p>
+<ul>
+<li>Top 50 weekly Volume</li>
+<li>Top 30 IBD Relative Strength</li>
+</ul>
+<p><b>Now let's look at a complete example</b> of screener criteria for Elder's Triple Screen Trading System:</p>
+weekly MACD Histogram(5,34,7) is below weekly MACD Histogram(5,34,7) 1 week ago<br>
+and weekly +DI(13) is below weekly -DI(13)<br>
+and weekly EMA(20) has been decreasing for 2 weeks<br>
+and FI(2) crossed below 0
+<p/>
+<p><b>Here is another example:</b></p>
+Volume MA(20) is above 100000 and MA(60) is above 20<br>
+and Range is below MIN(Range, 6) 1 day ago<br>
+and High is below High 1 day ago and Low is above Low 1 day ago<br>
+and MIN(CCI(10),5) is below -100<br> 
+and Aroon Up(63) is above Aroon Down(63)
+<p/>
+</body>
+</html>

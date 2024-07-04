@@ -1,0 +1,674 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:5000/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:5000/static/favicon-16x16.png">
+    <title>Indicators</title>
+    <style type="text/css">
+        body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Calibri" }
+    </style>
+</head>
+
+<body>
+<p>Over 30 popular technical indicators can be used in both screeners 
+and charts, and most indicators can be customized with parameters. The 
+parameters are numbers separated by comma, and enclosed with parentheses
+ when used in a screener sentence. Please pay attention to the order of 
+parameters.</p>
+<table>
+    <tbody><tr>
+        <td valign="bottom" height="28" bgcolor="#92D050" align="left">Common Name</td>
+        <td valign="bottom" bgcolor="#92D050" align="left">Function Name(s)</td>
+        <td valign="bottom" bgcolor="#92D050" align="left">Usage Example</td>
+        <td valign="bottom" bgcolor="#92D050" align="left">Description of Parameters</td>
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Simple Moving Average</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">MA</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">MA(20)</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">Awesome Oscillator</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">AO</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">AO(5,34)</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">short period, long period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Kaufman’s Adaptive Moving Average</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">KAMA</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">KAMA(10,2,30)</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">period, number of periods for the fastest EMA constant, number of periods for the slowest EMA constant</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">Money Flow Index</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">MFI</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">MFI(14)</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Rate of Change</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">ROC</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">ROC(12)</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">Relative Strength Index</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">RSI</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">RSI(14)</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Stochastic Oscillator</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">Fast Stochastic<br>Slow Stochastic</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">Fast Stochastic(14,3)<br>Slow Stochastic(14,3)</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">K% period, D% period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">True strength Index</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">TSI</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">TSI(25,13)</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">high period, low period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Ultimate Oscillator</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">UO</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">UO(7,14,28,4.0,2.0,1.0)</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">short period, medium period, long period, weight of short BP average, weight of medium BP average, weight of long BP average</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">Williams %R</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">Williams %R</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">Williams %R(14)</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">lookback period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Accumulation/Distribution Index</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">ADI</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">ADI()</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left"></td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">Chaikin Money Flow</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">CMF</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">CMF(20)</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Ease of movement</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">EMV</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">EMV(14)</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">Force Index</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">FI</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">FI(13)</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Negative Volume Index</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">NVI</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">NVI()</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left"></td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">On-balance volume</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">OBV</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">OBV()</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left"></td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Volume-price trend</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">VPT</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">VPT()</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left"></td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">Average True Range</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">ATR</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">ATR(14)</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Bollinger Bands</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">Upper Bollinger Band<br>Lower Bollinger Band<br>Median Bollinger Band<br>Width of Bollinger Band<br>Percentage of Bollinger Band</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">Upper Bollinger Band(20,2)<br>Lower Bollinger Band(20,2)<br>Median Bollinger Band(20,2)<br>Width of Bollinger Band(20,2)<br>Percentage of Bollinger Band(20,2)</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">period, standard deviation</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">Donchian Channel</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">Upper Donchian Channel<br>Lower Donchian Channel<br>Median Donchian Channel<br>Width of Donchian Channel<br>Percentage of Donchian Channel</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">Upper Donchian Channel(20)<br>Lower Donchian Channel(20)<br>Median Donchian Channel(20)<br>Width of Donchian Channel(20)<br>Percentage of Donchian Channel(20)</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Keltner Channel</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">Upper Keltner Channel<br>Lower Keltner Channel<br>Median Keltner Channel<br>Width of Keltner Channel<br>Percentage of Keltner Channel</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">Upper Keltner Channel(14)<br>Lower Keltner Channel(14)<br>Median Keltner Channel(14)<br>Width of Keltner Channel(14)<br>Percentage of Keltner Channel(14)</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">Average Directional Movement Index</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">ADX<br>+DI<br>-DI</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">ADX(14)<br>+DI(14)<br>-DI(14)</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Aroon Indicator</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">Aroon Up<br>Aroon Down</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">Aroon Up(25)<br>Aroon Down(25)</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">Commodity Channel Index</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">CCI</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">CCI(20)</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Detrended Price Oscillator</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">DPO</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">DPO(20)</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">Exponential Moving Average</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">EMA</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">EMA(14)</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Ichimoku Kinko Hyo</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">Ichimoku A<br>Ichimoku B<br>Ichimoku Base Line<br>Ichimoku Conversion Line</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">Ichimoku A(9,26,52)<br>Ichimoku B(9,26,52)<br>Ichimoku Base Line(9,26,52)<br>Ichimoku Conversion Line(9,26,52)</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">low period, medium period, high period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">KST Oscillator</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">KST</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">KST(10,15,20,30,10,10,10,15)</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">period 1, period 2, period 3, period 4, smoothed period 1, smoothed period 2, smoothed period 3, smoothed period 4</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Moving Average Convergence Divergence</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">MACD<br>MACD Signal<br>MACD Histogram</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">MACD(12,26,9)<br>MACD Signal(12,26,9)<br>MACD Histogram(12,26,9)</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">fast period, slow period, signal period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">Mass Index</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">MI</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">MI(9,25)</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">low period, high period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Trix</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">TRIX</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">TRIX(15)</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">Vortex Indicator</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">+VI<br>-VI</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">+VI(14)<br>-VI(14)</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">period</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#E7E6E6" align="left">Parabolic Stop and Reverse</td> 
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">PSAR Up<br>PSAR Down<br>PSAR Up Signal<br>PSAR Down Signal</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">PSAR Up(0.2)<br>PSAR Down(0.2)<br>PSAR Up Signal(0.2)<br>PSAR Down Signal(0.2)</td>
+    
+        <td valign="middle" bgcolor="#E7E6E6" align="left">acceleration factor</td> 
+    </tr>
+
+
+    
+
+    <tr>
+        <td valign="middle" height="28" bgcolor="#00B0F0" align="left">Volume MA</td> 
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">Volume MA</td> 
+    
+
+    
+       
+         
+
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">Volume MA(20)</td>
+    
+        <td valign="middle" bgcolor="#00B0F0" align="left">period</td> 
+    </tr>
+
+
+
+</tbody></table></body></html>
